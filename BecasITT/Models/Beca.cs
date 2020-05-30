@@ -7,10 +7,10 @@ namespace BecasITT.Models
 {
     public class Beca
     {
-        public int IdBeca { get; set; }
+        public int Id { get; set; }
         public string NombreBeca { get; set; }
         public string Descripcion { get; set; }
-        public int IdDatosGral { get; set; }
-        public int IdSocioEco { get; set; }
+        public virtual DatosGral DatosGral { get; set; }
+        public virtual SocioEconomico SocioEconomico { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace BecasITT.Models
 {
@@ -11,6 +12,8 @@ namespace BecasITT.Models
         public int IdAlumno { set; get; }
         public int Noctrl { get; set; }
         public string CorreoIns { get; set; }
+        [Required]
+        [StringLength(20, MinimumLength = 8)]
         public string Contraseña { get; set; }
         public int IdBeca { get; set; }
     }

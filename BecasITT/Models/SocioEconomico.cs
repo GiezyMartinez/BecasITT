@@ -2,11 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BecasITT.Models
 {
     public class SocioEconomico
     {
+        [Key]
+        [ForeignKey("Beca")]
+        public int IdBeca { get; set; }
+        public virtual Beca Beca { get; set; }
+
         public int IdSocieEco { get; set; }
         public string LugarNacimiento { get; set; }
         //¿Cuentas con visa(si/no)?
