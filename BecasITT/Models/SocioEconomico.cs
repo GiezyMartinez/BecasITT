@@ -9,12 +9,12 @@ namespace BecasITT.Models
 {
     public class SocioEconomico
     {
-        [Key]
-        [ForeignKey("Beca")]
-        public int IdBeca { get; set; }
+        [Key]//Cumple con dos funciones: 1) establece que dicha propiedad es la llave primaria de la tabla. 2) Establece que siempre hace referencia a una Beca, es decir, 
+             //que la propiedad en no-null.
+        [ForeignKey("Beca")]//Esta propiedad también es la clave externa que establece la relación con el modelo Beca.
+        public int BecaID { get; set; }
         public virtual Beca Beca { get; set; }
 
-        public int IdSocieEco { get; set; }
         public string LugarNacimiento { get; set; }
         //¿Cuentas con visa(si/no)?
         public string Visa { get; set; }

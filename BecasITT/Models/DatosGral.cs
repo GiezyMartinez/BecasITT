@@ -8,13 +8,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace BecasITT.Models
 {
     public class DatosGral
-    {
-        [Key]
-        [ForeignKey("Beca")]
-        public int IdBeca { get; set; }
-        public virtual Beca Beca { get; set; }
-
-        public int IdDatosGral { get; set; }
+    { //El ID de la clase Beca es también el ID de esta clase, y al mismo tiempo es la llave foranea que establce la relación con el modelo Beca.
+        [Key] //Llave primaria
+        [ForeignKey("Beca")] //Realiza la referencia de relación con la clase Beca.
+        public int BecaID { get; set; }
+        public virtual Beca Beca { get; set; } //Propiedad de navegación que establece la relación uno a uno entre la clases Beca y DatosGral.
         public string Nombre { get; set; }
         public string ApellidoP { get; set; }
         public string ApellidoM { get; set; }
@@ -30,5 +28,6 @@ namespace BecasITT.Models
 
         public uint Telefono { get; set; }
         public uint Celular { get; set; }
+       
     }
 }
