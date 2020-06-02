@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BecasITT.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace BecasITT.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult MostrarAlumno()
+        { return View(); }
         public ActionResult Index()
         {
             return View();
