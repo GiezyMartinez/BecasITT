@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<BecasITT.Models.Alumno>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Alumno";
 }
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>MostrarAlumno</title>
+    <title>Index</title>
 </head>
 <body>
     <p>
@@ -17,6 +17,9 @@
     </p>
     <table class="table">
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Beca.NombreBeca)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Noctrl)
             </th>
@@ -31,6 +34,9 @@
     
     @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Beca.NombreBeca)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Noctrl)
             </td>

@@ -19,7 +19,7 @@ namespace BecasITT.Models
         public string Ocupación { get; set; }
         [DataType(DataType.Currency)]
         [Column(TypeName = "money")]
-        public double Ingreso { get; set; }
+        public decimal Ingreso { get; set; }
         //LLave foranea
         public int? BecaID { get; set; }
         public virtual Beca Beca { get; set; }
