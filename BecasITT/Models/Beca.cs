@@ -19,8 +19,6 @@ namespace BecasITT.Models
         public virtual SocioEconomico SocioEconomico { get; set; } //El hecho de que sea virtual le establece una propiedad NULL, es decir que la beca puede tener o no tener
                                                                    //un formulario de estudio socio económico
         public virtual IList<IngresoMensual> IngresoMensuals { get; set; }
-       
-
         public virtual Alumno Alumno { get; set; }
     }
 }
